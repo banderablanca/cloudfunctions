@@ -36,7 +36,7 @@ $ go get -u firebase.google.com/go
 
 ### Download Project and go to folder banderablancafunctions
 ```sh
-$ git clone git@github.com:EdHuamani/banderablanca.git
+$ git clone git@github.com:banderablanca/banderablancafunctions.git
 ```
 ```sh
 $ cd banderablancafunctions
