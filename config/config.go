@@ -2,10 +2,12 @@ package config
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 
 	"cloud.google.com/go/firestore"
+	"cloud.google.com/go/storage"
 	firebase "firebase.google.com/go"
 	"firebase.google.com/go/messaging"
 )
@@ -53,4 +55,19 @@ func GetMessagingInstance() *messaging.Client {
 	}
 
 	return messaging
+}
+
+// GetStorageInstance get a instance of Messaging
+func GetStorageInstance() *storage.Client {
+	client, err := storage.NewClient(ctx)
+	if err != nil {
+		log.Fatalf("Storage: %v", err)
+	}
+
+	return client
+}
+
+// GetBucketName get name of bucket
+func GetBucketName() string {
+	return fmt.Sprintf("%s.appspot.com", projectID)
 }

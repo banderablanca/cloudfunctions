@@ -49,3 +49,24 @@ func CreateNotifications(ctx context.Context, e models.EventComment) error {
 	err := <-notification.Send(flagID, &flagComment)
 	return err
 }
+
+// CreateImageMarked trigger to create a image with logo
+func CreateImageMarked(ctx context.Context, e models.EventFlag) error {
+	path := e.Value.Name
+	flagID := utils.GetParams(path, "flags")
+	flagData := e.Value.Fields.ParseFlag()
+
+	imageMarkedURL, err := flag.UploadImageMarked(flagID, flagData)
+	if err != nil {
+		log.Fatalf("Error to upload flag image marked: %v", err)
+		return err
+	}
+
+	err = <-flag.Update(flagID, map[string]interface{}{"image_marked": imageMarkedURL})
+	if err != nil {
+		log.Fatalf("Error to update flag: %v", err)
+		return err
+	}
+
+	return nil
+}
