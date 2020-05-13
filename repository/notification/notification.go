@@ -1,8 +1,8 @@
 package notification
 
 import (
-	"banderablancafunctions/config"
-	"banderablancafunctions/models"
+	"cloudfunctions/config"
+	"cloudfunctions/models"
 	"context"
 
 	"cloud.google.com/go/firestore"

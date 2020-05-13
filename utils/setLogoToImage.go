@@ -39,7 +39,7 @@ func SetLogoToImage(resourceOriginal io.ReadCloser, resourceType string) bytes.B
 	draw.Draw(resourceOutput, imgLogoBounds.Add(point), imgLogo, image.ZP, draw.Over)
 
 	var buffer bytes.Buffer
-	jpeg.Encode(&buffer, resourceOutput, &jpeg.Options{jpeg.DefaultQuality})
+	jpeg.Encode(&buffer, resourceOutput, &jpeg.Options{})
 
 	return buffer
 }

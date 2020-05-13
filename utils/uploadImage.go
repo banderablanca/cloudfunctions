@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"banderablancafunctions/config"
+	"cloudfunctions/config"
 	"context"
 	"fmt"
 	"io"

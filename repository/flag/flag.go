@@ -1,9 +1,9 @@
 package flag
 
 import (
-	"banderablancafunctions/config"
-	"banderablancafunctions/models"
-	"banderablancafunctions/utils"
+	"cloudfunctions/config"
+	"cloudfunctions/models"
+	"cloudfunctions/utils"
 	"context"
 	"fmt"
 	"net/http"

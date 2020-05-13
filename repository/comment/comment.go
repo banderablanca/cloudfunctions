@@ -1,9 +1,9 @@
 package comment
 
 import (
-	"banderablancafunctions/config"
-	"banderablancafunctions/models"
-	"banderablancafunctions/utils"
+	"cloudfunctions/config"
+	"cloudfunctions/models"
+	"cloudfunctions/utils"
 	"context"
 
 	"google.golang.org/api/iterator"

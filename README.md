@@ -34,12 +34,12 @@ $ echo "export GO111MODULE=on" >> ~/.bash_profile
 $ go get -u firebase.google.com/go
 ```
 
-### Download Project and go to folder banderablancafunctions
+### Download Project and go to folder cloudfunctions
 ```sh
-$ git clone git@github.com:banderablanca/banderablancafunctions.git
+$ git clone git@github.com:banderablanca/cloudfunctions.git
 ```
 ```sh
-$ cd banderablancafunctions
+$ cd cloudfunctions
 ```
 
 ### Get & update dependencies

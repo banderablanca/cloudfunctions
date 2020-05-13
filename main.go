@@ -1,11 +1,11 @@
-package banderablancafunctions
+package cloudfunctions
 
 import (
-	"banderablancafunctions/models"
-	"banderablancafunctions/repository/comment"
-	"banderablancafunctions/repository/flag"
-	"banderablancafunctions/repository/notification"
-	"banderablancafunctions/utils"
+	"cloudfunctions/models"
+	"cloudfunctions/repository/comment"
+	"cloudfunctions/repository/flag"
+	"cloudfunctions/repository/notification"
+	"cloudfunctions/utils"
 	"context"
 	"log"
 )
