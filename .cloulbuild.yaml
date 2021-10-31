@@ -1,0 +1,28 @@
+steps:
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - functions
+      - deploy
+      - CreateNotifications
+      - --runtime
+      - go113
+      - --trigger-event
+      - providers/cloud.firestore/eventTypes/document.create
+      - --trigger-resource
+      - projects/${PROJECT_ID}/databases/(default)/documents/comments/{flagID}/comments/{commentID}
+      - --timeout
+      - 450
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - functions
+      - deploy
+      - CreateImageMarked
+      - --runtime
+      - go113
+      - --trigger-event
+      - providers/cloud.firestore/eventTypes/document.create
+      - --trigger-resource
+      - projects/${PROJECT_ID}/databases/(default)/documents/flags/{flagID}
+      - --timeout
+      - 450
